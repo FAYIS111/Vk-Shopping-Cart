@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "435478095990",
+    "project_id": "vk-shopping-cart",
+    "storage_bucket": "vk-shopping-cart.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:435478095990:android:95e723ee3e197441a75757",
+        "android_client_info": {
+          "package_name": "com.example.vk_shopping"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV1siFlzLGf8pd3sQDIrN_8Ks7CgT0zZo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

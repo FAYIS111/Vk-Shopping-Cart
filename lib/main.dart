@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vk_shopping/pages/cartSection.dart';
 import 'package:vk_shopping/pages/commonPage.dart';
 import 'package:vk_shopping/pages/coolDrinkSection.dart';
 import 'package:vk_shopping/pages/curryPowderSection.dart';
@@ -11,10 +12,18 @@ import 'package:vk_shopping/pages/nutsSection.dart';
 import 'package:vk_shopping/pages/riseSection.dart';
 import 'package:vk_shopping/pages/signupPage.dart';
 import 'package:vk_shopping/pages/vegitableSection.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     MaterialApp(
+      debugShowCheckedModeBanner: false,
       onGenerateRoute: (RouteSettings settings) {
         if (settings.name == '/fruites') {
           return MaterialPageRoute(builder: (context) => FruitSection());
@@ -36,6 +45,7 @@ void main() {
         '/curryPowder': (context) => CurryPowderSection(),
         '/rise': (context) => RiseSection(),
         '/nuts': (context) => NutsSection(),
+        '/cart': (context) => CartSection(),
       },
       initialRoute: "logIn",
       title: "VK STORE",

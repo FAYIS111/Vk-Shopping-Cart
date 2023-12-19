@@ -22,22 +22,27 @@ class _CurryPowderSectionState extends State<CurryPowderSection> {
             NormalItemCard(
               contantText: 'RedChilliPowder \n Rs:20',
               avatarImage: curryPowder1,
+              buttonActions: () {},
             ),
             NormalItemCard(
               contantText: 'Chiili Flakes \n Rs:51',
               avatarImage: curryPowder2,
+              buttonActions: () {},
             ),
             NormalItemCard(
               contantText: 'ManjalPodi \n Rs:40',
               avatarImage: curryPowder4,
+              buttonActions: () {},
             ),
             NormalItemCard(
               contantText: 'PepperPowder \n Rs:45',
               avatarImage: curryPowder5,
+              buttonActions: () {},
             ),
             NormalItemCard(
               contantText: 'BrownChilli \n Rs:30',
               avatarImage: curryPowder6,
+              buttonActions: () {},
             ),
           ],
         ),

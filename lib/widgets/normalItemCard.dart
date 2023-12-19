@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:vk_shopping/widgets/assets.dart';
 import 'package:vk_shopping/widgets/neumorphicButton.dart';
@@ -5,10 +6,12 @@ import 'package:vk_shopping/widgets/neumorphicButton.dart';
 class NormalItemCard extends StatefulWidget {
   final String contantText;
   final String avatarImage;
+  final void Function() buttonActions;
   const NormalItemCard({
     super.key,
     required this.contantText,
     required this.avatarImage,
+    required this.buttonActions,
   });
 
   @override
@@ -16,10 +19,23 @@ class NormalItemCard extends StatefulWidget {
 }
 
 class _NormalItemCardState extends State<NormalItemCard> {
+  final CollectionReference donor =
+      FirebaseFirestore.instance.collection('items');
+
   @override
   Widget build(BuildContext context) {
     final totalItems = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
-    String? selectedItem;
+    String? selectedItems;
+
+    void addData() {
+      final data = {
+        'Name': widget.contantText,
+        'sl': 1,
+        'Rs': selectedItems,
+      };
+      donor.add(data);
+    }
+
     return Padding(
       padding: const EdgeInsets.all(5),
       child: Card(
@@ -55,12 +71,12 @@ class _NormalItemCardState extends State<NormalItemCard> {
                     child: DropdownButtonFormField(
                         items: totalItems
                             .map((e) => DropdownMenuItem(
-                                  child: Text(e),
                                   value: e,
+                                  child: Text(e),
                                 ))
                             .toList(),
                         onChanged: (variab) {
-                          selectedItem = variab;
+                          selectedItems = variab;
                         }),
                   ),
                 ),
@@ -69,7 +85,10 @@ class _NormalItemCardState extends State<NormalItemCard> {
                   height: 45,
                   child: NeumorphicButton(
                     buttonText: 'ADD TO CART',
-                    buttonAction: () {},
+                    buttonAction: () {
+                      widget.buttonActions();
+                      addData();
+                    },
                     fontSize: 10,
                   ),
                 ),
