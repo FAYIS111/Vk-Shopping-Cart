@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class AppTextField extends StatelessWidget {
   String labelText;
   TextInputType keyBoard;
   int maxiLength;
   int maxLine;
+  TextEditingController? controler;
   AppTextField({
     super.key,
     required this.labelText,
     required this.keyBoard,
     required this.maxiLength,
     required this.maxLine,
+    required this.controler,
   });
 
   @override
@@ -21,6 +24,7 @@ class AppTextField extends StatelessWidget {
         right: 8,
       ),
       child: TextField(
+        controller: controler,
         onTap: () {},
         maxLines: maxLine,
         keyboardType: keyBoard,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vk_shopping/pages/commonPage.dart';
+import 'package:vk_shopping/pages/homePage.dart';
 import 'package:vk_shopping/widgets/assets.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -15,7 +16,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(Duration(seconds: 5), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => YourMainScreen()),
+        MaterialPageRoute(builder: (context) => Homepage()),
       );
     });
   }

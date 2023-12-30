@@ -20,84 +20,108 @@ class _VegitableSectionState extends State<VegitableSection> {
         child: ListView(
           children: [
             NormalItemCard(
-              contantText: 'L beatrout \n Rs:20',
+              contantText: 'L beatrout \n ',
+              description: 'Rs:',
+              itemRs: 20,
               avatarImage: vegitable1,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Cabbege \n Rs:30',
+              contantText: 'Cabbege \n ',
+              description: 'Rs:',
+              itemRs: 35,
               avatarImage: vegitable2,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Tomatto \n Rs:33',
+              contantText: 'Tomatto \n ',
+              description: 'Rs:',
+              itemRs: 33,
               avatarImage: vegitable13,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Plumkin \n Rs:32',
+              contantText: 'Plumkin \n ',
+              description: 'Rs:',
+              itemRs: 32,
               avatarImage: vegitable11,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Potato \n Rs:28',
+              contantText: 'Potato \n ',
+              description: 'Rs:',
+              itemRs: 28,
               avatarImage: vegitable12,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Ginger \n Rs:40',
+              contantText: 'Ginger \n ',
+              description: 'Rs:',
+              itemRs: 40,
               avatarImage: vegitable7,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'GreenColly \n Rs:40',
+              contantText: 'GreenColly \n ',
+              description: 'Rs:',
+              itemRs: 42,
               avatarImage: vegitable8,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Kakkari \n Rs:26',
+              contantText: 'Kakkari \n ',
+              description: 'Rs:',
+              itemRs: 26,
               avatarImage: vegitable9,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Onion \n Rs:20',
+              contantText: 'Onion \n ',
+              description: 'Rs:',
+              itemRs: 20,
               avatarImage: vegitable10,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'CollyFlower \n Rs:38',
+              contantText: 'CollyFlower \n ',
+              description: 'Rs:',
+              itemRs: 38,
               avatarImage: vegitable5,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'DrumStick \n Rs:18',
+              contantText: 'DrumStick \n ',
+              description: 'Rs:',
+              itemRs: 18,
               avatarImage: vegitable6,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Carrot \n Rs:52',
+              contantText: 'Carrot \n ',
+              description: 'Rs:',
+              itemRs: 52,
               avatarImage: vegitable3,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');

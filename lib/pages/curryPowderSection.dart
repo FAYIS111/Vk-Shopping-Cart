@@ -20,29 +20,49 @@ class _CurryPowderSectionState extends State<CurryPowderSection> {
         child: ListView(
           children: [
             NormalItemCard(
-              contantText: 'RedChilliPowder \n Rs:20',
+              contantText: 'RedChilliPowder \n ',
+              description: 'Rs:',
+              itemRs: 20,
               avatarImage: curryPowder1,
-              buttonActions: () {},
+              buttonActions: () {
+                Navigator.pushNamed(context, '/cart');
+              },
             ),
             NormalItemCard(
-              contantText: 'Chiili Flakes \n Rs:51',
+              contantText: 'Chiili Flakes \n ',
+              description: 'Rs:',
+              itemRs: 52,
               avatarImage: curryPowder2,
-              buttonActions: () {},
+              buttonActions: () {
+                Navigator.pushNamed(context, '/cart');
+              },
             ),
             NormalItemCard(
-              contantText: 'ManjalPodi \n Rs:40',
+              contantText: 'ManjalPodi \n ',
+              description: 'Rs:',
+              itemRs: 40,
               avatarImage: curryPowder4,
-              buttonActions: () {},
+              buttonActions: () {
+                Navigator.pushNamed(context, '/cart');
+              },
             ),
             NormalItemCard(
-              contantText: 'PepperPowder \n Rs:45',
+              contantText: 'PepperPowder \n ',
+              description: 'Rs:',
+              itemRs: 45,
               avatarImage: curryPowder5,
-              buttonActions: () {},
+              buttonActions: () {
+                Navigator.pushNamed(context, '/cart');
+              },
             ),
             NormalItemCard(
-              contantText: 'BrownChilli \n Rs:30',
+              contantText: 'BrownChilli \n ',
+              description: 'Rs:',
+              itemRs: 35,
               avatarImage: curryPowder6,
-              buttonActions: () {},
+              buttonActions: () {
+                Navigator.pushNamed(context, '/cart');
+              },
             ),
           ],
         ),

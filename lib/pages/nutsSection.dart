@@ -20,35 +20,45 @@ class _NutsSectionState extends State<NutsSection> {
         child: ListView(
           children: [
             NormalItemCard(
-              contantText: 'Mix Nuts \n Rs:150',
+              contantText: 'Mix Nuts \n ',
+              description: 'Rs:',
+              itemRs: 150,
               avatarImage: nuts1,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Badam \n Rs:100',
+              contantText: 'Badam \n ',
+              description: 'Rs:',
+              itemRs: 110,
               avatarImage: nuts2,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Pista \n Rs:200',
+              contantText: 'Pista \n ',
+              description: 'Rs:',
+              itemRs: 200,
               avatarImage: nuts3,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Cassue&Pista \n Rs:155',
+              contantText: 'Cassue&Pista \n ',
+              description: 'Rs:',
+              itemRs: 155,
               avatarImage: nuts4,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: ' CassueMix\n Rs:250',
+              contantText: ' CassueMix\n ',
+              description: 'Rs:',
+              itemRs: 255,
               avatarImage: nuts5,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');

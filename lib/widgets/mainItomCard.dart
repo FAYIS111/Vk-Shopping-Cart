@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:vk_shopping/widgets/assets.dart';
 import 'package:vk_shopping/widgets/neumorphicButton.dart';
 
 class MainItomCard extends StatefulWidget {

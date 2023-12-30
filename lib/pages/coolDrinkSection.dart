@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:vk_shopping/widgets/assets.dart';
 import 'package:vk_shopping/widgets/normalItemCard.dart';
@@ -21,35 +20,48 @@ class _CoolDrinkSectionState extends State<CoolDrinkSection> {
         child: ListView(
           children: [
             NormalItemCard(
-              contantText: 'Fanta \n Rs:20',
+              contantText: 'Fanta \n ',
+              description: 'Rs:',
+              itemRs: 25,
               avatarImage: coolDrink3,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
+                setState(() {
+                  
+                });
               },
             ),
             NormalItemCard(
-              contantText: 'CocaCola \n Rs:40',
+              contantText: 'CocaCola \n ',
+              description: 'Rs:',
+              itemRs: 40,
               avatarImage: coolDrink2,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Pepsi \n Rs:25',
+              contantText: 'Pepsi \n ',
+              description: 'Rs:',
+              itemRs: 25,
               avatarImage: coolDrink5,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'SevenUp \n Rs:30',
+              contantText: 'SevenUp \n',
+              description: 'Rs:',
+              itemRs: 30,
               avatarImage: coolDrink6,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'Sprite \n Rs:20',
+              contantText: 'Sprite \n ',
+              description: 'Rs:',
+              itemRs: 20,
               avatarImage: coolDrink7,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');

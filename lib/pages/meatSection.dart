@@ -20,70 +20,90 @@ class _MeatSectionState extends State<MeatSection> {
         child: ListView(
           children: [
             NormalItemCard(
-              contantText: 'NormalBeaf \n Rs:120',
+              contantText: 'NormalBeaf \n ',
+              description: 'Rs:',
+              itemRs: 120,
               avatarImage: beaf1,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'PieceBeaf \n Rs:140',
+              contantText: 'PieceBeaf \n ',
+              description: 'Rs:',
+              itemRs: 140,
               avatarImage: beaf3,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'FlatBeaf \n Rs:115',
+              contantText: 'FlatBeaf \n ',
+              description: 'Rs:',
+              itemRs: 115,
               avatarImage: beaf4,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'ChickenChest \n Rs:168',
+              contantText: 'ChickenChest \n ',
+              description: 'Rs:',
+              itemRs: 168,
               avatarImage: beaf5,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: ' chickenFull\n Rs:122',
+              contantText: ' chickenFull\n ',
+              description: 'Rs:',
+              itemRs: 122,
               avatarImage: beaf6,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'chickenLeg \n Rs:100',
+              contantText: 'chickenLeg \n ',
+              description: 'Rs:',
+              itemRs: 100,
               avatarImage: beaf7,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'PorkSlice \n Rs:224',
+              contantText: 'PorkSlice \n ',
+              description: 'Rs:',
+              itemRs: 224,
               avatarImage: beaf8,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'PorkSlice \n Rs:250',
+              contantText: 'PorkSlice \n ',
+              description: 'Rs:',
+              itemRs: 250,
               avatarImage: beaf9,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'PorkBone \n Rs:220',
+              contantText: 'PorkBone \n ',
+              description: 'Rs:',
+              itemRs: 264,
               avatarImage: beaf10,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
               },
             ),
             NormalItemCard(
-              contantText: 'TunaFish \n Rs:110',
+              contantText: 'TunaFish \n ',
+              description: 'Rs:',
+              itemRs: 110,
               avatarImage: beaf11,
               buttonActions: () {
                 Navigator.pushNamed(context, '/cart');
