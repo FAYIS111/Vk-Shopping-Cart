@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:vk_shopping/pages/logInPage.dart';
+import 'package:vk_shopping/widgets/assets.dart';
 
 class FinalPage extends StatefulWidget {
   const FinalPage({super.key});
@@ -31,50 +32,66 @@ class _FinalPageState extends State<FinalPage> {
         child: Container(
           height: double.infinity,
           width: double.infinity,
-          color: Colors.grey.shade300,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          color: Colors.white,
+          child: Stack(
             children: [
               Container(
-                height: 200,
                 width: double.infinity,
-                color: Colors.greenAccent,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "YOUR SHOPPING",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                      ),
-                    ),
-                    Text(
-                      "SUCCESSFULLY COMPLETED",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                      ),
-                    ),
-                  ],
+                height: double.infinity,
+                child: Image.asset(
+                  gifIcon,
+                  fit: BoxFit.cover,
                 ),
               ),
-              Container(
-                width: 200,
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(Colors.greenAccent),
+              Align(
+                alignment: AlignmentDirectional.center,
+                child: Container(
+                  height: 200,
+                  width: double.infinity,
+                  color: Colors.white,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "YOUR SHOPPING",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                      Text(
+                        "SUCCESSFULLY COMPLETED",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
                   ),
-                  onPressed: () {
-                    signOut();
-                  },
-                  child: Text(
-                    'SIGN OUT',
-                    style: TextStyle(
-                      color: Colors.black,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Align(
+                  alignment: AlignmentDirectional.bottomCenter,
+                  child: Container(
+                    width: 200,
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(Colors.greenAccent),
+                      ),
+                      onPressed: () {
+                        signOut();
+                      },
+                      child: Text(
+                        'SIGN OUT',
+                        style: TextStyle(
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
                   ),
                 ),

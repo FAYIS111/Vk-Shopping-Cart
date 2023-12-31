@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vk_shopping/widgets/assets.dart';
+import 'package:vk_shopping/widgets/buttonWidget.dart';
 import 'package:vk_shopping/widgets/normalItemCard.dart';
 
 class RiseSection extends StatefulWidget {
@@ -21,6 +22,14 @@ class _RiseSectionState extends State<RiseSection> {
         color: Colors.white,
         child: ListView(
           children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: buttonWidget(
+                  buttonText: "GO BACK",
+                  buttonAction: () {
+                    Navigator.pop(context);
+                  }),
+            ),
             NormalItemCard(
               contantText: 'Pachari \n ',
               description: 'Rs:',

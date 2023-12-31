@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vk_shopping/widgets/assets.dart';
+import 'package:vk_shopping/widgets/buttonWidget.dart';
 import 'package:vk_shopping/widgets/mainItomCard.dart';
 
 class MainItemPage extends StatefulWidget {
@@ -24,6 +25,14 @@ class _MainItemPageState extends State<MainItemPage> {
         color: Colors.white,
         child: ListView(
           children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: buttonWidget(
+                  buttonText: "GO BACK",
+                  buttonAction: () {
+                    Navigator.pop(context);
+                  }),
+            ),
             MainItomCard(
               buttonAction: () {
                 Navigator.pushNamed(context, '/coolDrink');

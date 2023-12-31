@@ -55,6 +55,8 @@ class _CartSectionState extends State<CartSection> {
                                       ),
                                     ),
                                     Container(
+                                      width: 100,
+                                      height: 50,
                                       child: TotalSum(),
                                     ),
                                   ],
@@ -91,6 +93,7 @@ class _CartSectionState extends State<CartSection> {
                                     ),
                                     onPressed: () {
                                       Navigator.pop(context);
+                                      print(totalSum);
                                     },
                                     child: Text(
                                       "GO BACK",

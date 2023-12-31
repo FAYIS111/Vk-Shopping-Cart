@@ -89,3 +89,6 @@ String coolDrink4 = "assets/asset/mouten dew.jpeg";
 String coolDrink5 = "assets/asset/pepsi.jpeg";
 String coolDrink6 = "assets/asset/seven up.jpeg";
 String coolDrink7 = "assets/asset/sprite.jpeg";
+
+//gif section
+String gifIcon = "assets/asset/gif.gif";

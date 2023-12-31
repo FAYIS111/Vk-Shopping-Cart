@@ -22,7 +22,11 @@ class _TotalSumState extends State<TotalSum> {
         if (snapshot.hasData) {
           totalSum = 0.0; // Reset total sum for each data update
           for (var doc in snapshot.data!.docs) {
-            totalSum += doc.get('sl') as double;
+            // Safely get the 'sl' field and convert it to double
+            final fieldValue = doc.get('sl');
+            if (fieldValue is num) {
+              totalSum += fieldValue.toDouble();
+            }
           }
           // Use the calculated totalSum to build a widget
           return ElevatedButton(
