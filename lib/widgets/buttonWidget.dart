@@ -9,7 +9,7 @@ Widget buttonWidget({
     child: ElevatedButton(
       style: ButtonStyle(
         backgroundColor:
-            MaterialStateProperty.all(Color.fromARGB(255, 107, 219, 111)),
+            MaterialStateProperty.all(const Color.fromARGB(255, 107, 219, 111)),
       ),
       onPressed: buttonAction,
       child: Text(buttonText),

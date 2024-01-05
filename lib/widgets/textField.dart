@@ -31,25 +31,25 @@ class AppTextField extends StatelessWidget {
         maxLength: maxiLength,
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               width: 1,
               color: Colors.grey,
             ),
             borderRadius: BorderRadius.circular(20),
           ),
           labelText: labelText,
-          labelStyle: TextStyle(
+          labelStyle: const TextStyle(
             color: Colors.brown,
           ),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               width: 1,
               color: Colors.brown,
             ),
             borderRadius: BorderRadius.circular(20),
           ),
           disabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               width: 1,
               color: Colors.grey,
             ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class TotalSum extends StatefulWidget {
-  TotalSum({Key? key}) : super(key: key);
+  const TotalSum({Key? key}) : super(key: key);
 
   @override
   State<TotalSum> createState() => _TotalSumState();
@@ -29,20 +29,26 @@ class _TotalSumState extends State<TotalSum> {
             }
           }
           // Use the calculated totalSum to build a widget
-          return ElevatedButton(
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.white),
-            ),
-            onPressed: () {
-              setState(() {
-                Navigator.pushNamed(context, '/cart', arguments: totalSum);
-              });
-            },
-            child: Text(
-              totalSum.toString(),
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 20,
+          return Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: SingleChildScrollView(
+              // Wrap with SingleChildScrollView
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.white),
+                ),
+                onPressed: () {
+                  setState(() {
+                    Navigator.pushNamed(context, '/cart', arguments: totalSum);
+                  });
+                },
+                child: Text(
+                  totalSum.toString(),
+                  style: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                  ),
+                ),
               ),
             ),
           );
@@ -50,7 +56,7 @@ class _TotalSumState extends State<TotalSum> {
           // Handle the case where there's no data yet
           return Column(
             children: [
-              CircularProgressIndicator(),
+              const CircularProgressIndicator(),
               ElevatedButton(
                 onPressed: () {
                   setState(() {
@@ -58,7 +64,7 @@ class _TotalSumState extends State<TotalSum> {
                         arguments: totalSum);
                   });
                 },
-                child: Text('total Sum'),
+                child: const Text('total Sum'),
               ),
             ],
           );

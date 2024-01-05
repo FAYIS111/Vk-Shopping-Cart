@@ -23,7 +23,7 @@ class _LogInPageState extends State<LogInPage> {
         email: email.text,
         password: password.text,
       );
-      Get.offAll(WrapperPage());
+      Get.offAll(const WrapperPage());
     } catch (e) {
       if (e is FirebaseAuthException) {
         // Handle specific Firebase Authentication exceptions here
@@ -31,14 +31,14 @@ class _LogInPageState extends State<LogInPage> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: Text('Sign In Failed'),
+              title: const Text('Sign In Failed'),
               content: Text('${e.message}'),
               actions: <Widget>[
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
-                  child: Text('OK'),
+                  child: const Text('OK'),
                 ),
               ],
             );
@@ -108,7 +108,7 @@ class _LogInPageState extends State<LogInPage> {
               child: NeumorphicButton(
                 buttonText: "SIGN IN",
                 buttonAction: () {
-                  Get.to(SignInPage());
+                  Get.to(const SignInPage());
                 },
                 fontSize: 18,
               ),

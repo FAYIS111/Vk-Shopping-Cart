@@ -15,7 +15,8 @@ class _MainItemPageState extends State<MainItemPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
+        backgroundColor: const Color.fromARGB(255, 107, 219, 111),
+        title: const Center(
           child: Text("GROCERY"),
         ),
       ),

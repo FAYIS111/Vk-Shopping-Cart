@@ -37,7 +37,7 @@ class _CartSectionState extends State<CartSection> {
                           child: Card(
                             // Customize the properties of the additional card here
                             color:
-                                Colors.grey.shade300, // Change color as needed
+                                Colors.grey.shade200, // Change color as needed
                             elevation: 5, // Adjust elevation if necessary
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -46,7 +46,7 @@ class _CartSectionState extends State<CartSection> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    Text(
+                                    const Text(
                                       'TOTAL AMOUNT',
                                       style: TextStyle(
                                         color: Colors.black,
@@ -55,9 +55,11 @@ class _CartSectionState extends State<CartSection> {
                                       ),
                                     ),
                                     Container(
-                                      width: 100,
-                                      height: 50,
-                                      child: TotalSum(),
+                                      width: 150,
+                                      height: 80,
+                                      child: const SingleChildScrollView(
+                                        child: TotalSum(),
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -70,9 +72,10 @@ class _CartSectionState extends State<CartSection> {
                                             MaterialStateProperty.all(
                                                 Colors.greenAccent)),
                                     onPressed: () {
-                                      Navigator.pushNamed(context, '/final');
+                                      Navigator.pushReplacementNamed(
+                                          context, "/final");
                                     },
-                                    child: Text(
+                                    child: const Text(
                                       "CONFORM BUY",
                                       style: TextStyle(
                                         color: Colors.black,
@@ -93,9 +96,8 @@ class _CartSectionState extends State<CartSection> {
                                     ),
                                     onPressed: () {
                                       Navigator.pop(context);
-                                      print(totalSum);
                                     },
-                                    child: Text(
+                                    child: const Text(
                                       "GO BACK",
                                       style: TextStyle(
                                         color: Colors.black,
@@ -127,7 +129,7 @@ class _CartSectionState extends State<CartSection> {
                                   child: Center(
                                     child: Text(
                                       donorSnap['Name'],
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         color: Colors.black,
                                         fontSize: 18,
                                         fontWeight: FontWeight.normal,
@@ -148,7 +150,7 @@ class _CartSectionState extends State<CartSection> {
                                           mainAxisAlignment:
                                               MainAxisAlignment.spaceEvenly,
                                           children: [
-                                            Text("Total Count"),
+                                            const Text("Total Count"),
                                             Text(donorSnap['Rs'].toString()),
                                           ],
                                         ),
@@ -165,7 +167,7 @@ class _CartSectionState extends State<CartSection> {
                                             mainAxisAlignment:
                                                 MainAxisAlignment.spaceEvenly,
                                             children: [
-                                              Text("Total Rs"),
+                                              const Text("Total Rs"),
                                               Text(donorSnap['sl'].toString()),
                                             ],
                                           ),
@@ -175,7 +177,18 @@ class _CartSectionState extends State<CartSection> {
                                   ],
                                 ),
                                 IconWidget(
-                                  buttonAction: () {},
+                                  buttonAction: () {
+                                    setState(() {
+                                      Navigator.pushNamed(context, '/update',
+                                          arguments: {
+                                            "Name": donorSnap["Name"],
+                                            "rs": donorSnap["Rs"],
+                                            "sl": donorSnap["sl"],
+                                            "itemrs": donorSnap["itemRs"],
+                                            "id": donorSnap.id,
+                                          });
+                                    });
+                                  },
                                   buttonIcon: Icons.edit,
                                   iconColor: Colors.blue,
                                 ),
@@ -193,9 +206,7 @@ class _CartSectionState extends State<CartSection> {
                       }
                     });
               }
-              return Container(
-                child: Text("NO ORDER IN CART"),
-              );
+              return const Text("NO ORDER IN CART");
             }),
       ),
     );

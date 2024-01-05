@@ -4,7 +4,7 @@ class NeumorphicButton extends StatefulWidget {
   final String buttonText;
   final void Function()? buttonAction;
   final double fontSize;
-  NeumorphicButton({
+  const NeumorphicButton({
     super.key,
     required this.buttonText,
     required this.buttonAction,
@@ -32,7 +32,7 @@ class _NeumorphicButtonState extends State<NeumorphicButton> {
           ),
           onTapCancel: () => setState(() => _isButtonPressed = false),
           child: AnimatedContainer(
-            duration: Duration(milliseconds: 120),
+            duration: const Duration(milliseconds: 120),
             height: 100,
             width: 250,
             decoration: BoxDecoration(

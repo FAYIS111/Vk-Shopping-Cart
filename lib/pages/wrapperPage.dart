@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:vk_shopping/pages/commonPage.dart';
-import 'package:vk_shopping/pages/homePage.dart';
 import 'package:vk_shopping/pages/logInPage.dart';
 
 class WrapperPage extends StatefulWidget {
@@ -19,9 +18,9 @@ class _WrapperPageState extends State<WrapperPage> {
           stream: FirebaseAuth.instance.authStateChanges(),
           builder: (context, snapShot) {
             if (snapShot.hasData) {
-              return CommonPage();
+              return const CommonPage();
             } else {
-              return LogInPage();
+              return const LogInPage();
             }
           }),
     );

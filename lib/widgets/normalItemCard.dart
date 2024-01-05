@@ -49,6 +49,7 @@ class _NormalItemCardState extends State<NormalItemCard> {
         'sl': totalAmount,
         'Rs': selectedValue,
         'dis': widget.description,
+        'itemRs': widget.itemRs,
       };
       donor.add(data);
     }
@@ -75,7 +76,7 @@ class _NormalItemCardState extends State<NormalItemCard> {
               widget.contantText +
                   widget.description.toString() +
                   widget.itemRs.toString(),
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -88,6 +89,7 @@ class _NormalItemCardState extends State<NormalItemCard> {
                   color: Colors.white,
                   child: DropdownButtonHideUnderline(
                     child: DropdownButton2<double>(
+                      value: selectedValue,
                       isExpanded: true,
                       items: items
                           .map((double item) => DropdownMenuItem<double>(
@@ -100,7 +102,6 @@ class _NormalItemCardState extends State<NormalItemCard> {
                                 ),
                               ))
                           .toList(),
-                      value: selectedValue,
                       onChanged: (double? value) {
                         setState(() {
                           selectedValue = value;

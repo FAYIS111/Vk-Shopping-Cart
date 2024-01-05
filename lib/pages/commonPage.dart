@@ -28,7 +28,7 @@ class YourMainScreen extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         color: Colors.white,
-        child: LogInPage(),
+        child: const LogInPage(),
       ),
     );
   }

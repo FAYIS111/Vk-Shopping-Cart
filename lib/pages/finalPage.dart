@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,7 +18,7 @@ class _FinalPageState extends State<FinalPage> {
   Future<void> signOut() async {
     try {
       await _auth.signOut();
-      Get.offAll(LogInPage());
+      Get.offAll(const LogInPage());
     } catch (e) {
       // Handle sign-out errors here
       print('Error signing out: $e');
@@ -46,21 +47,14 @@ class _FinalPageState extends State<FinalPage> {
               Align(
                 alignment: AlignmentDirectional.center,
                 child: Container(
-                  height: 200,
+                  height: 230,
                   width: double.infinity,
                   color: Colors.white,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        "YOUR SHOPPING",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                        ),
-                      ),
-                      Text(
+                      textAnimation(),
+                      const Text(
                         "SUCCESSFULLY COMPLETED",
                         style: TextStyle(
                           color: Colors.black,
@@ -86,7 +80,7 @@ class _FinalPageState extends State<FinalPage> {
                       onPressed: () {
                         signOut();
                       },
-                      child: Text(
+                      child: const Text(
                         'SIGN OUT',
                         style: TextStyle(
                           color: Colors.black,
@@ -103,3 +97,10 @@ class _FinalPageState extends State<FinalPage> {
     );
   }
 }
+
+Widget textAnimation() => Center(
+      child: AnimatedTextKit(
+        animatedTexts: [WavyAnimatedText("YOUR SHOPPING IS")],
+        repeatForever: true,
+      ),
+    );

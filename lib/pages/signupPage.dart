@@ -22,7 +22,7 @@ class _SignInPageState extends State<SignInPage> {
         password: password.text,
       );
       // If sign-up is successful, navigate to the Wrapper or next screen
-      Get.offAll(WrapperPage());
+      Get.offAll(const WrapperPage());
     } catch (e) {
       if (e is FirebaseAuthException) {
         // Handle specific Firebase Authentication exceptions here
@@ -30,7 +30,7 @@ class _SignInPageState extends State<SignInPage> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: Text('Sign Up Failed'),
+              title: const Text('Sign Up Failed'),
               content: Text('${e.message}'),
               actions: <Widget>[
                 TextButton(
